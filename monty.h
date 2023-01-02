@@ -42,5 +42,6 @@ typedef struct instruction_s
 
 void pint(int *stack, int *stack_ptr, int line_number);
 void pop(int *stack, int *stack_ptr, int line_number);
+void get_func(char *opcode, stack_t **cp_stack, unsigned int line);
 
 #endif
