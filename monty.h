@@ -18,12 +18,12 @@
  * for stack, queues, LIFO, FIFO
  */
 
-typedef struct stack
+typedef struct stack_s
 {
 	int n;
-	struct stack *prev;
-	struct stack *next;
-} stack;
+	struct stack_s *prev;
+	struct stack_s *next;
+} stack_t;
 
 /**
  * struct instruction_s - opcode and its function
