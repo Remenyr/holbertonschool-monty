@@ -9,7 +9,7 @@
  * Return: function pointer or EXIT_FAILURE if it fails
  */
 
-void get_func(char *opcode, stack_t **cp_stack, unsigned int line)
+void get_func(char *opcode, stack **cp_stack, unsigned int line)
 {
 	int index = 0;
 
@@ -18,4 +18,4 @@ void get_func(char *opcode, stack_t **cp_stack, unsigned int line)
 		{"pint",  pint},
 		{"pop", pop},
 		{NULL, NULL}
-	};
+}
