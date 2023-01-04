@@ -8,7 +8,7 @@
  * Return: void
  */
 
-void pall_func(stack_t **sstack, unsigned int __attribute__((unused)) line)
+void pall(stack_t **sstack, unsigned int __attribute__((unused)) line)
 {
 	int index = 0;
 	stack_t *current;

@@ -1,20 +1,24 @@
 #include "monty.h"
 
-#define EXIT_FAILURE 1
 /**
- * stack is an array that represents the stack.
- * stack_ptr is a pointer to an integer that represents the stack pointer. The stack pointer points to the top element of the stack.
- * line_number is an integer that represents the line number where the opcode was encountered.
+ * pint - prints the value at the top of the stack
+ * @sstack: name of the stack
+ * @line: line number of the command
+ *
+ * Return: void
  */
-// This function should be called when the pint opcode is encountered
 
-void pint(int *stack, int *stack_ptr, int line_number)
+void pint(stack_t **sstack, unsigned int line)
 {
+	stack_t *current;
 
-	if (*stack_ptr < 1) {
-		printf("L%d: can't pint, stack empty\n", line_number);
+	current = *sstack;
+
+	if (!sstack || !*sstack)
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line);
 		exit(EXIT_FAILURE);
 	}
 
-	printf("%d\n", stack[*stack_ptr - 1]);
+	printf("%d\n", current->n);
 }

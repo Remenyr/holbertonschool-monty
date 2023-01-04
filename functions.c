@@ -14,12 +14,12 @@ void get_func(char *opcode, stack_t **cp_stack, unsigned int line)
 	int index = 0;
 
 	instruction_t function[] = {
-		{"pall", pall_func},
-		{"pint",  pint_func},
-		{"pop", pop_func},
-		{"swap", swap_func},
-		{"add", add_func},
-		{"nop", nop_func},
+		{"pall", pall},
+		{"pint",  pint},
+		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 

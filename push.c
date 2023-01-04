@@ -9,7 +9,7 @@
  * Return: void
  */
 
-void push_func(char *opcode, stack_t **top_stack, unsigned int line)
+void push(char *opcode, stack_t **top_stack, unsigned int line)
 {
 	stack_t *new;
 
