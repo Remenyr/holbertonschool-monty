@@ -1,7 +1,5 @@
 #include "monty.h"
 
-#define EXIT_FAILURE 1
-
 /**
  * add_func - adds the top two elements of the stack
  * @stack: stack
@@ -10,14 +8,25 @@
  * Return: void
  */
 
-void add(int *stack, int *size)
+void add_func(stack_t **stack, unsigned int line)
 {
-	if (*size < 2)
+	int first;
+	int second;
+	int result;
+	stack_t *top;
+
+	top = *stack;
+	if (!*stack || !(*stack)->next)
 	{
-		printf("L%d: can't add, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't add, stack too short\n", line);
 		exit(EXIT_FAILURE);
 	}
 
-	stack[*size - 2] += stack[*size - 1];
-	(*size)--;
+	first = top->n;
+	second = top->next->n;
+	result = first + second;
+
+	pop_func(stack, line);
+
+	(*stack)->n = result;
 }
