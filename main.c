@@ -59,11 +59,11 @@ void get_code(FILE *file, stack_t **tpstack)
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, "\n\t\r ");
-			push_func(token, tpstack, counter);
+			push(token, tpstack, counter);
 		}
 		else
 			get_func(token, tpstack, counter);
 	}
 
 	free(opcode);
-}
+i}

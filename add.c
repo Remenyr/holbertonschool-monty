@@ -26,7 +26,7 @@ void add(stack_t **stack, unsigned int line)
 	second = top->next->n;
 	result = first + second;
 
-	pop_func(stack, line);
+	pop(stack, line);
 
 	(*stack)->n = result;
 }
