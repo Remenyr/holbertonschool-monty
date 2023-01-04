@@ -46,5 +46,6 @@ void get_func(char *opcode, stack **cp_stack, unsigned int line);
 void add(int *stack, int *size);
 void nop_func(stack **stack, unsigned int line);
 void swap(int *stack, int size);
+void push_func(char *opcode, stack_t **top_stack, unsigned int line);
 
 #endif
