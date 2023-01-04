@@ -47,5 +47,8 @@ void add(int *stack, int *size);
 void nop_func(stack **stack, unsigned int line);
 void swap(int *stack, int size);
 void push_func(char *opcode, stack_t **top_stack, unsigned int line);
+void pall_func(stack_t **sstack, unsigned int __attribute__((unused)) line);
+int _isnumber(char *opcode);
+void mem_free(stack_t *head);
 
 #endif
