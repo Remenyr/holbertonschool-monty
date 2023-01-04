@@ -1,24 +1,28 @@
 #include "monty.h"
 
-#define EXIT_FAILURE 1
 /**
- * stack is an array that represents the stack.
- * stack_ptr is a pointer to an integer that represents the stack pointer. The stack pointer points to the top element of the stack.
- * line_number is an integer that represents the line number where the opcode was encountered.
+ * pop_func - removes the top element of the stack
+ * @stack: stack where top will be removed
+ * @line: kine number of the command
  *
+ * Retunr: void
  */
 
-// This function should be called when the pop opcode is encountered
-
-void pop(int *stack, int *stack_ptr, int line_number)
+void pop(stack_t **stack, unsigned int line)
 {
+	stack_t *top;
 
-	if (*stack_ptr < 1) {
+	top = *stack;
 
-		printf("L%d: can't pop an empty stack\n", line_number);
+	if (!stack || !*stack)
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line);
+		exit(EXIT_FAILURE);
+	}
 
-		exit(EXIT_FAILURE);+
-	x}
+	*stack = top->next;
+	if (*stack != NULL)
+		(*stack)->prev = NULL;
 
-	(*stack_ptr)--;
+	free(top);
 }

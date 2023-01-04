@@ -8,7 +8,7 @@
  * Return: void
  */
 
-void add_func(stack_t **stack, unsigned int line)
+void add(stack_t **stack, unsigned int line)
 {
 	int first;
 	int second;

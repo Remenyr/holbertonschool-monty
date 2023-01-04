@@ -40,10 +40,10 @@ typedef struct instruction_s
 	void (*f)(stack **stack, unsigned int line_number);
 } instruction_t;
 
-void pint(int *stack, int *stack_ptr, int line_number);
-void pop(int *stack, int *stack_ptr, int line_number);
+void pint(stack_t **sstack, unsigned int line);
+void pop(stack_t **stack, unsigned int line);
 void get_func(char *opcode, stack **cp_stack, unsigned int line);
-void add(int *stack, int *size);
+void add(stack_t **stack, unsigned int line);
 void nop(stack_t **stack, unsigned int line);
 void swap(int *stack, int size);
 void push(char *opcode, stack_t **top_stack, unsigned int line);
