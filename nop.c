@@ -8,7 +8,7 @@
  * Return: void
  */
 
-void nop_func(stack_t **stack, unsigned int line)
+void nop_func(stack **stack, unsigned int line)
 {
 	(void) stack;
 	(void) line;
