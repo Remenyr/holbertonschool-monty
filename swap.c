@@ -1,7 +1,5 @@
 #include "monty.h"
 
-#define EXIT_FAILURE 1
-
 /**
  * swap_func - swaps the top two elements of the stack
  * @stack: stack of elements
@@ -10,15 +8,22 @@
  * Return: void
  */
 
-void swap(int *stack, int size)
+void swap(stack_t **stack, unsigned int line)
 {
-	if (size < 2)
+	stack_t *current;
+	stack_t *node;
+
+	current = *stack;
+	if (!*stack || !(*stack)->next)
 	{
-		printf("L%d: can't swap, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line);
 		exit(EXIT_FAILURE);
 	}
 
-	int temp = stack[size - 1];
-	stack[size - 1] = stack[size - 2];
-	stack[size - 2] = temp;
+	node = current->next;
+	current->next = node->next;
+	node->next = *stack;
+	current->prev = node;
+	node->prev = NULL;
+	*stack = node;
 }

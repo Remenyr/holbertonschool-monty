@@ -45,7 +45,7 @@ void pop(stack_t **stack, unsigned int line);
 void get_func(char *opcode, stack_t **cp_stack, unsigned int line);
 void add(stack_t **stack, unsigned int line);
 void nop(stack_t **stack, unsigned int line);
-void swap(int *stack, int size);
+void swap_func(stack_t **stack, unsigned int line);
 void push(char *opcode, stack_t **top_stack, unsigned int line);
 void pall(stack_t **sstack, unsigned int __attribute__((unused)) line);
 int _isnumber(char *opcode);
