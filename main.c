@@ -66,4 +66,4 @@ void get_code(FILE *file, stack_t **tpstack)
 	}
 
 	free(opcode);
-i}
+}
