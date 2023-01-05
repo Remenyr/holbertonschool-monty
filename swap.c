@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * swap_func - swaps the top two elements of the stack
+ * swap - swaps the top two elements of the stack
  * @stack: stack of elements
  * @line: line number of the command
  *

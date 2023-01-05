@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pushc - pushes an element to the stack
+ * pushc.c - pushes an element to the stack
  * @opcode: pointer to the string
  * @top_stack: linear data structure
  * @line: number of the line of the command

@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pop_func - removes the top element of the stack
+ * pop - removes the top element of the stack
  * @stack: stack where top will be removed
  * @line: kine number of the command
  *

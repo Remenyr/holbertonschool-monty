@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pall_func - prints all the values on the stack
+ * pall - prints all the values on the stack
  * @sstack: linear data structure
  * @line: unused attribute
  *

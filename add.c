@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * add_func - adds the top two elements of the stack
+ * add - adds the top two elements of the stack
  * @stack: stack
  * @line: line number of the command
  *
